@@ -21,7 +21,7 @@ class AllActivity: AppCompatActivity() {
         val lsv = findViewById<ListView>(R.id.ls1)
         var listItems: MutableList<String> = ArrayList()
         var listOfJsons: MutableList<String> = ArrayList()
-        val gson = Gson()
+        val gson = Gson() //this comment exists just to test CI
         val lister = Files.list(filesDir.toPath()).forEach{
             listItems.add(it.fileName.toString())
         }

@@ -56,7 +56,7 @@ class FinalActivity : AppCompatActivity(){
                 GlobalScope.launch {
                     try{
                         val userKey = sharedPreference.getString("userKey", "")
-                        URL("https://tictimer.untone.uk/utauth/upload_session.php?key=" + userKey + "&session=" + writeDataToJson).readText()
+                        URL("https://tictimer.untone.uk/api/" + Config().type + "/upload_session.php?key=" + userKey + "&session=" + writeDataToJson + "private_key=" + Config().key).readText()
                     }
                     catch (e: Exception) {
                         runOnUiThread({
@@ -77,7 +77,7 @@ class FinalActivity : AppCompatActivity(){
             GlobalScope.launch {
                 try{
                     val userKey = sharedPreference.getString("theraKey", "")
-                    URL("https://tictimer.untone.uk/utauth/therapist_api_upload_session.php?key=" + userKey + "&session=" + writeDataToJson).readText()
+                    URL("https://tictimer.untone.uk/utauth/therapist/upload_session.php?key=" + userKey + "&session=" + writeDataToJson).readText()
                 }
                 catch (e: Exception) {
                     runOnUiThread({
@@ -114,7 +114,7 @@ class TrySendSessionData : JobService() {
         val userKey = sharedPreference.getString("userKey", "")
             try{
                 GlobalScope.launch {
-                    URL("https://tictimer.untone.uk/utauth/upload_session.php?key=" + userKey + "&session=" + jsonToBeSent).readText()
+                    URL("https://tictimer.untone.uk/api/" + Config().type + "/upload_session.php?key=" + userKey + "&session=" + jsonToBeSent + "private_key=" + Config().key).readText()
                 }
                 Toast.makeText(applicationContext, "Sent session later", Toast.LENGTH_LONG).show()
                 return false

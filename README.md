@@ -1,3 +1,5 @@
+![TicTimer Build](https://github.com/UNTONE-DEVELOPMENT/TicTimer/actions/workflows/build-tictimer.yml/badge.svg)
+
 # TicTimer
 TicTimer is an android application for keeping track of tics. https://tictimer.untone.uk
 # Todo

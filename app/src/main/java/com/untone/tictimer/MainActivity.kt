@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        println(Config().type)
         val constrl = findViewById<ConstraintLayout>(R.id.cl1)
         constrl.visibility = View.INVISIBLE
         val sharedPreference = getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
@@ -110,7 +111,7 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val gson = Gson()
                     val userKey = sharedPreference.getString("userKey", "")
-                    val urlUT = URL("https://tictimer.untone.uk/utauth/getuserinfo.php?key=" + userKey)
+                    val urlUT = URL("https://tictimer.untone.uk/api/" + Config().type + "/get_user_info.php?key=" + userKey + "&private_key=" + Config().key)
                     val utJson = urlUT.readText()
                     val utJsonDecode = gson.fromJson(utJson, AuthJsonData::class.java)
                     val url = URL(utJsonDecode.pfp)

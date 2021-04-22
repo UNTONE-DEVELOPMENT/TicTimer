@@ -36,14 +36,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         val loginBrowser = findViewById<WebView>(R.id.webView2)
-        loginBrowser.loadUrl("https://www.untone.uk/id/utauth?client_id=8")
+        if (Config().type == "dev")
+        {
+            loginBrowser.loadUrl("https://www.untone.uk/id/utauth?client_id=10")
+        }
+
+        else if (Config().type == "prod"){
+            loginBrowser.loadUrl("https://www.untone.uk/id/utauth?client_id=8")
+        }
         loginBrowser.settings.javaScriptEnabled = true
         loginBrowser.requestFocus()
         loginBrowser.isVerticalScrollBarEnabled = true
         loginBrowser.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 GlobalScope.launch {
-                    if (url.toString().contains("https://tictimer.untone.uk/utauth/auth.php?key")){
+                    println(url.toString())
+                    if (url.toString().contains("https://tictimer.untone.uk/api/" + Config().type + "/auth.php?key")){
                         val urla = URL(url.toString())
                         val reader = urla.readText()
                         val sharedPreference = getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)

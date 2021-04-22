@@ -12,7 +12,7 @@ TicTimer is an android application for keeping track of tics. https://tictimer.u
 - Build project
 - Profit
 # Contributing
-TicTimer is licensed under the the MIT licence. You can read the licence at [LICENCE](https://github.com/UNTONE-DEVELOPMENT/TicTimer/blob/main/LICENSE
+TicTimer is licensed under the the MIT licence. You can read the licence at [LICENCE](https://github.com/UNTONE-DEVELOPMENT/TicTimer/blob/main/LICENSE)
 
 For now we only accept Contributions through [GitHub Pull Requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Although do keep in mind that any edits to the way TicTimer connects with UNTONE APIs, such as UTAuth, TicTimer portal and UNTONE ID will require thorough examination before being merged in the main branch. With that said, feel free to poke at my code and PR as you please.
 # Conclusion

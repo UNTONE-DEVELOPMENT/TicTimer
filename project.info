@@ -5,7 +5,7 @@ Name : TicTimer
 Edition : Main
 
 Genre : Application
-Engine/Framework : Android
+Engine/Framework : Android SDK Version 30
 Language : JetBrains Kotlin
 Project Location : /
 

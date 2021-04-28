@@ -3,7 +3,7 @@
 # TicTimer
 TicTimer is an android application for keeping track of tics. https://tictimer.untone.uk
 # Todo
-- Fix widget
+- Play Store release
 # Building
 - Download latest Android SDK and Android Studio for your platform.
 - Clone TicTimer repository to your drive.

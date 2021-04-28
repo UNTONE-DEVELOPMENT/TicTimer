@@ -3,8 +3,8 @@
     android:initialKeyguardLayout="@layout/reminder_widget"
     android:initialLayout="@layout/reminder_widget"
     android:minWidth="200dp"
-    android:minHeight="75dp"
-    android:previewImage="@drawable/example_appwidget_preview"
+    android:minHeight="45dp"
+    android:previewImage="@drawable/widget"
 
     android:updatePeriodMillis="300000"
     android:widgetCategory="home_screen"></appwidget-provider>

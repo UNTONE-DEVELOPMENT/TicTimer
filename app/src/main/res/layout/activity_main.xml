@@ -191,7 +191,7 @@
         app:layout_constraintEnd_toEndOf="@+id/im1"
         app:layout_constraintStart_toStartOf="@+id/im1"
         app:layout_constraintTop_toTopOf="@+id/im1"
-        app:srcCompat="@drawable/untone_logo" />
+        app:srcCompat="@drawable/utlogo2" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv1"
